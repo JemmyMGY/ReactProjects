@@ -50,11 +50,11 @@ const AddUser = (props) => {
   const userAgeHandler = (e) => {
     setUserAge(e.target.value);
   };
-  const cancelErrorHandler = (errorStatus) => {
-    setErrorHappened(errorStatus);
+  const cancelErrorHandler = () => {
+    setErrorHappened(false);
   };
   return (
-    <div>
+    <>
       {errorHappened && (
         <ErrorModal
           title={error.title}
@@ -85,7 +85,7 @@ const AddUser = (props) => {
           <Button type="submit">Add User</Button>
         </form>
       </Card>
-    </div>
+    </>
   );
 };
 
